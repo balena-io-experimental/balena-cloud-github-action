@@ -1,0 +1,21 @@
+# action.yml
+name: 'Balena Cloud'
+description: 'Deploy your code to Balena'
+inputs:
+  balena_token:
+    description: 'The API token used to authenticate you against the balenaCloud service.'
+    required: true
+  balena_app_name:
+    description: 'The name of the balenaCloud application to release to.'
+    required: true
+  balena_url:
+    description: 'The domain of the balenaCloud instance to use.'
+    required: false
+    default: 'balena-cloud.com'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'codesandbox'  
+  color: 'purple'
+    
